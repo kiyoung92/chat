@@ -1,7 +1,9 @@
-function App() {
+import './App.css'
+
+const App = () => {
   return (
     <div>
-      <h1>kiyoung</h1>
+      <h1>안녕!🤩</h1>
     </div>
   );
 }
