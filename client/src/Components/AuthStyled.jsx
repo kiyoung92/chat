@@ -15,6 +15,7 @@ export const authStyled = {
         border: none;
         border-bottom: 2px solid #fff;
         background: #333;
+        border-radius: 0px;
     `,
     inputText: css`
         flex: 0.2;
