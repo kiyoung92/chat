@@ -10,19 +10,24 @@ export const authStyled = {
         margin-bottom: 10px;
     `,
     input: css`
-        flex: 0.8;
+        flex: 1;
         height: 40px;
         border: none;
-        border-bottom: 2px solid #fff;
+        border-bottom: 2px solid #888;
         background: #333;
         border-radius: 0px;
-    `,
-    inputText: css`
-        flex: 0.2;
-        text-align: right;
+        color: #fff;
+        font-size: 18px;
         font-weight: bold;
-        font-size: 14px;
-        margin-right: 10px;
+        transition: 1s ease all;
+        padding: 0px 10px;
+        background: linear-gradient(#3182f6, #3182f6) bottom / 0% 2px no-repeat #333;
+        &:focus {
+            outline: none;
+            /* border-bottom: 2px solid #3182f6; */
+            border-bottom: 2px solid #888;
+            background-size: 100% 2px;
+        }
     `,
     buttonWrap: css`
         width: 100%;
@@ -38,5 +43,5 @@ export const authStyled = {
         background: #fafafa;
         padding: 0px;
         margin-left: 10px;
-    `
+    `,
 }
