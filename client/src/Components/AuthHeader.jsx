@@ -3,7 +3,9 @@ import { styled } from "./AuthStyled";
 
 const AuthHeader = () => {
     return(
-        <div css={ styled.header }></div>
+        <div>
+            
+        </div>
     )
 }
 

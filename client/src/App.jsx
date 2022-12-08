@@ -1,12 +1,11 @@
 /** @jsxImportSource @emotion/react */
-import { styled } from "./Components/AuthStyled";
-import AuthHeader from "./Components/AuthHeader";
+import { commonStyled } from "./Components/CommonStyled";
+import Auth from "./Views/Auth";
 
 const App = () => {
   return (
-    <div>
-      <h1 css={ styled.header }>안녕!🤩</h1>
-      <AuthHeader />
+    <div css={ commonStyled.paddingWrap }>
+      <Auth />
     </div>
   );
 }
