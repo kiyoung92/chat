@@ -1,24 +1,15 @@
 /** @jsxImportSource @emotion/react */
-import { useEffect } from 'react';
 import InputFocusLine from './Common/InputLine';
 import { authStyled } from '../Components/AuthStyled';
 import { commonStyled } from './CommonStyled';
 
 const AuthBody = () => {
-    useEffect(() => {
-
-    }, []);
 
     return(
         <div css={ commonStyled.w100p }>
             <form css={ commonStyled.w100p }>
                 <div css={ authStyled.inputWrap }>
-                    <input css={ authStyled.input } type="text" name="아이디 입력" placeholder='아이디를 입력해주세요' ref={ (ref) => { 
-                        if (ref !== null) {
-                            console.log(ref)
-                            ref.focus();
-                        }
-                     } } />
+                    <input css={ authStyled.input } type="text" name="아이디 입력" placeholder='아이디를 입력해주세요' />
                     <InputFocusLine />
                 </div>
                 <div css={ authStyled.inputWrap }>
