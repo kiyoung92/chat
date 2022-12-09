@@ -25,15 +25,15 @@ export const authStyled = {
         margin: 0px;
         &:focus {
             outline: none;
-            :first-of-type + p {
-                background: linear-gradient(#3d6afe, #3d6afe) bottom / 100% 4px no-repeat #aaa;
+            :first-of-type + div {
+                background: linear-gradient(#3d6afe, #3d6afe) bottom / 100% 100% no-repeat #888;
             }
         }
     `,
     lined: css`
         position: absolute;
-        background: linear-gradient(#3d6afe, #3d6afe) bottom / 0% 4px no-repeat #aaa;
-        height: 2px;
+        background: linear-gradient(#3d6afe, #3d6afe) bottom / 0% 100% no-repeat #888;
+        height: 1.5px;
         width: 100%;
         transition: 0.4s ease all;
         bottom: 0px;
