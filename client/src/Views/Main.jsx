@@ -46,7 +46,9 @@ const Main = () => {
     }
 
     useEffect(() => {
-        rocketLauncher();
+        if (img.current !== null) {
+            rocketLauncher();
+        }
     });
 
     return (
