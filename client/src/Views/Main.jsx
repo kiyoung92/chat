@@ -11,6 +11,13 @@ const mainStyle = {
         width: 100%;
         height: 100%;
         background: #333;
+        
+    `,
+    img: css`
+        position: absolute;
+        height: calc(100% - 400px);
+        bottom: calc(0% - (100% - 400px));
+        transition: 4s ease all;
         @keyframes fadeout {
             from {
                 opacity: 1;
@@ -19,13 +26,25 @@ const mainStyle = {
                 opacity: 0;
             }
         }
-    `,
-    img: css`
-        position: absolute;
-        height: calc(100% - 400px);
-        bottom: calc(0% - (100% - 400px));
-        transition: 4s ease all;
         
+    `,
+    appName: css`
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
     `
 }
 
@@ -33,15 +52,17 @@ const Main = () => {
     const navigator = useNavigate();
     const wrap = useRef(null);
     const img = useRef(null);
+    const appName = useRef(null);
 
     const rocketLauncher = () => {
-        img.current.style.bottom = `calc(0% - (100% - 400px - ${ img.current.offsetHeight + wrap.current.offsetHeight }px))`;
+        img.current.style.bottom = `calc(0% -  (100% - 400px - ${ (img.current.offsetHeight + wrap.current.offsetHeight) / 2 }px))`
         
         setTimeout(() => {
-            wrap.current.style.animation = `fadeout 3s`;
+            appName.current.style.animation = `fadein 3s`;
+            img.current.style.animation = `fadeout 3s`;
         }, 1000);
         setTimeout(() => {
-            navigator('/auth');
+            navigator('/join');
         }, 3600)
     }
 
@@ -54,6 +75,9 @@ const Main = () => {
     return (
         <div css={ mainStyle.wrap } ref={ wrap }>
             <img src={ Rocket } alt="" css={ mainStyle.img } ref={ img } />
+            <div css={ mainStyle.appName } ref={ appName }>
+                <h1>TEST</h1>
+            </div>
         </div>
     )
 }
