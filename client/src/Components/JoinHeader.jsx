@@ -8,8 +8,6 @@ const JoinHeader = () => {
             <div css={ joinStyled.headerLeft }>
                 <BackButton width='30px' height='30px' stroke='#888' alt="" />
             </div>
-            <div css={ joinStyled.headerTitle }>
-            </div>
             <div css={ joinStyled.headerRight }>
                 <p css={ joinStyled.headerLeftText }>로그인</p>
             </div>            

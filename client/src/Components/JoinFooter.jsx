@@ -1,6 +1,11 @@
+/** @jsxImportSource @emotion/react */
+import { commonStyled } from "./CommonStyled";
+
 const JoinFooter = () => {
     return (
-        <div></div>
+        <div css={ commonStyled.footerWrap }>
+            <button css={ commonStyled.summitButton }>확인</button>
+        </div>
     )
 }
 

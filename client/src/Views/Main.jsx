@@ -11,6 +11,7 @@ const mainStyle = {
         width: 100%;
         height: 100%;
         background: #333;
+        overflow: hidden;
         
     `,
     img: css`
@@ -76,7 +77,7 @@ const Main = () => {
         <div css={ mainStyle.wrap } ref={ wrap }>
             <img src={ Rocket } alt="" css={ mainStyle.img } ref={ img } />
             <div css={ mainStyle.appName } ref={ appName }>
-                <h1>TEST</h1>
+                <h1>SSEM</h1>
             </div>
         </div>
     )

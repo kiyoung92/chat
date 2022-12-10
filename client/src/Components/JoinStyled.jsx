@@ -16,6 +16,7 @@ export const joinStyled = {
         position: absolute;
         box-sizing: border-box;
         top: 0;
+        justify-content: space-between;
         display: flex;
         padding: 0px 10px;
         color: #888;
@@ -43,5 +44,27 @@ export const joinStyled = {
         flex: 0.6;
         justify-content: center;
         align-items: center;
-    `
+    `,
+    bodyWrap: css`
+        display: flex;
+        height: calc(100% - 60px - 60px);
+        overflow-y: auto;
+        flex-direction: column;
+        width: 100%;
+        color: #fafafa;
+        box-sizing: border-box;
+    `,
+    footerWrap: css`
+        position: absolute;
+        bottom: 0px;
+        height: 60px;
+    `,
+    rowWrap: css`
+        padding: 10px 20px;
+    `,
+    bodyTitle: css`
+        font-size: 24px;
+        font-weight: bold;
+    `,
+    
 }
