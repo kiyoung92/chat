@@ -1,13 +1,17 @@
 /** @jsxImportSource @emotion/react */
-import JoinHeader from "../Components/JoinHeader";
-import JoinBody from "../Components/JoinBody";
-import { joinStyled } from "../Components/JoinStyled";
+// import UnderlineInput from "../Components/Common/UnderlineInput";
+import FooterButton from "../Components/Common/FooterButton";
+import FooterButtonWrap from "../Components/Common/FooterButtonWrap";
+import { commonStyled } from "../Components/Style/CommonStyled";
+import JoinHeader from "../Components/Join/JoinHeader";
 
 const Join = () => {
     return (
-        <div css={ joinStyled.wrap }>
+        <div css={ commonStyled.viewWrap }>
             <JoinHeader />
-            <JoinBody />
+            <FooterButtonWrap>
+                <FooterButton buttonText={ '로그인' } />
+            </FooterButtonWrap>
         </div>
     )
 }
