@@ -4,7 +4,7 @@ import { commonStyled } from '../Style/CommonStyled';
 const ContentsRight = (props) => {
     return (
         <div css={ commonStyled.contentsHeaderRight }>
-            <p>{ props.title }</p>
+            <span>{ props.title }</span>
         </div>
     )
 }
