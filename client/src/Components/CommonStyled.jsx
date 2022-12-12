@@ -48,13 +48,13 @@ export const commonStyled = {
         &:focus {
             outline: none;
             :first-of-type + div {
-                background: linear-gradient(#3d6afe, #3d6afe) bottom / 100% 100% no-repeat #fafafa;
+                background: linear-gradient(#3d6afe, #3d6afe) bottom / 100% 100% no-repeat #888;
             }
         }
     `,
     lined: css`
         position: absolute;
-        background: linear-gradient(#3d6afe, #3d6afe) bottom / 0% 100% no-repeat #fafafa;
+        background: linear-gradient(#3d6afe, #3d6afe) bottom / 0% 100% no-repeat #888;
         height: 1.5px;
         width: 100%;
         transition: 0.4s ease all;
