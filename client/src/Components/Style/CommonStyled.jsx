@@ -45,7 +45,7 @@ export const commonStyled = {
         padding: 0px;
     `,
     footerButtonWrap: css`
-        position: absolute;
+        position: fixed;
         height: 75px;
         width: 100%;
         bottom: 0;

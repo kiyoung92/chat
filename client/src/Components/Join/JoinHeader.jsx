@@ -8,7 +8,7 @@ const JoinHeader = () => {
     return (
         <ContentsHeader>
             <BackButton width={ '30px' } height={ '30px' } stroke={ '#ccc' } />
-            <ContentsHeaderTitle title={ '타이틀' }/>
+            {/* <ContentsHeaderTitle title={ '회원가입' }/> */}
             <ContentsRight title={ '로그인' } />
         </ContentsHeader>
     )
