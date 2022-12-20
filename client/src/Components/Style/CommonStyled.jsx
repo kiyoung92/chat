@@ -47,7 +47,7 @@ export const commonStyled = {
     `,
     footerButtonWrap: css`
         position: fixed;
-        height: 75px;
+        height: 60px;
         width: 100%;
         bottom: 0;
         box-sizing: border-box;
@@ -99,5 +99,8 @@ export const commonStyled = {
         font-weight: bold;
         text-align: center;
         font-size: 18px;
+    `,
+    mb20: css`
+        margin-bottom: 20px;
     `
 }
