@@ -102,5 +102,11 @@ export const commonStyled = {
     `,
     mb20: css`
         margin-bottom: 20px;
+    `,
+    contentsBodyWrap: css`
+        padding: 20px;
+        height: calc(100% - 60px);
+        overflow-y: auto;
+        color: #fefefe;
     `
 }

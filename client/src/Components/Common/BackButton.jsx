@@ -2,13 +2,24 @@
 import { ReactComponent as Back } from '../../Images/back.svg';
 import { commonStyled } from '../Style/CommonStyled';
 import { useNavigate } from "react-router-dom";
+import { useEffect } from 'react';
+import { createBrowserHistory } from 'history';
 
+
+// 히스토리로 백 버튼 수정해야함.
+// 안드 백 버튼 적용해야함.
 const BackButton = (props) => {
     const navigator = useNavigate();
     const navigatorHandler = (e) => {
         e.preventDefault();
-        navigator(-1);
+        navigator('/');
     }
+
+    useEffect(() => {
+        const hist = createBrowserHistory();
+
+        console.log(hist.location);
+    }, [])
 
     return (
         <div css={ commonStyled.contentsHeaderLeft } onClick={ navigatorHandler }>
