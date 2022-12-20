@@ -8,11 +8,10 @@ const mainStyle = {
     wrap: css`
         display: flex;
         justify-content: center;
+        position: absolute;
         width: 100%;
         height: 100%;
         background: #333;
-        overflow: hidden;
-        
     `,
     img: css`
         position: absolute;
@@ -56,11 +55,15 @@ const Main = () => {
     const appName = useRef(null);
 
     const rocketLauncher = () => {
-        img.current.style.bottom = `calc(0% -  (100% - 400px - ${ (img.current.offsetHeight + wrap.current.offsetHeight) / 2 }px))`
+        img.current && function () {
+            img.current.style.bottom = `calc(0% -  (100% - 400px - ${ (img.current.offsetHeight + wrap.current.offsetHeight) / 2 }px))`    
+        }();
         
         setTimeout(() => {
-            appName.current.style.animation = `fadein 3s`;
-            img.current.style.animation = `fadeout 3s`;
+            appName.current && img.current && function () {
+                appName.current.style.animation = `fadein 3s`;
+                img.current.style.animation = `fadeout 3s`;    
+            }();
         }, 1000);
         setTimeout(() => {
             navigator('/join');
@@ -70,7 +73,7 @@ const Main = () => {
     useEffect(() => {
         if (img.current !== null) {
             rocketLauncher();
-        }
+        };
     });
 
     return (

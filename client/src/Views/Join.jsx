@@ -5,6 +5,7 @@ import FooterButtonWrap from "../Components/Common/FooterButtonWrap";
 import { commonStyled } from "../Components/Style/CommonStyled";
 import JoinHeader from "../Components/Join/JoinHeader";
 
+
 const Join = () => {
     return (
         <div css={ commonStyled.viewWrap }>

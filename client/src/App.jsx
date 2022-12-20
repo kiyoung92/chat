@@ -1,16 +1,26 @@
 /** @jsxImportSource @emotion/react */
 import Main from "./Views/Main";
 import Join from "./Views/Join";
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import { RecoilRoot } from 'recoil';
+import './App.css'
+
 
 const App = () => {
+  const location = useLocation();
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={ <Main /> }></Route>
-        <Route path='/join' element={ <Join /> }></Route>
-      </Routes>
-    </BrowserRouter>
+    <RecoilRoot>
+      <TransitionGroup className={'transitions-wrapper'}>
+        <CSSTransition key={ location.pathname }  timeout={ 300 } classNames={ 'right' }>
+          <Routes location={ location }>
+            <Route path='/' element={ <Main /> }></Route>
+            <Route path='/join' element={ <Join /> }></Route>
+          </Routes>
+        </CSSTransition>
+      </TransitionGroup>
+    </RecoilRoot>
   );
 }
 

@@ -1,8 +1,9 @@
 /** @jsxImportSource @emotion/react */
 import ContentsHeader from "../Common/ContentsHeader";
-import ContentsHeaderTitle from "../Common/ContentsHeaderTitle";
+// import ContentsHeaderTitle from "../Common/ContentsHeaderTitle";
 import BackButton from "../Common/BackButton";
 import ContentsRight from '../Common/ContentsRight';
+
 
 const JoinHeader = () => {
     return (

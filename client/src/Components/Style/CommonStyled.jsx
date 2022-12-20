@@ -6,6 +6,7 @@ export const commonStyled = {
     viewWrap: css`
         width: 100%;
         height: 100%;
+        position: absolute;
     `,
     underlineInputWrap: css`
         display: flex;
