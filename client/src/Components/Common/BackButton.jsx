@@ -5,11 +5,9 @@ import { useNavigate } from "react-router-dom";
 
 const BackButton = (props) => {
     const navigator = useNavigate();
-
     const navigatorHandler = (e) => {
         e.preventDefault();
-
-        navigator('/');
+        navigator(-1);
     }
 
     return (
