@@ -10,7 +10,7 @@ const App = () => {
   
   return (
     <TransitionGroup className={'transitions-wrapper'}>
-      <CSSTransition key={ location.pathname }  timeout={ 300 } classNames={ 'left' }>
+      <CSSTransition key={ location.pathname }  timeout={ 300 } classNames={ 'right' }>
         <Routes location={ location }>
           <Route path='/' element={ <Main /> }></Route>
           <Route path='/join' element={ <Join /> }></Route>

@@ -80,6 +80,8 @@ export const commonStyled = {
         align-items: center;
         padding: 0px 20px;
         justify-content: space-between;
+        position: fixed;
+        width: 100%;
     `,
     contentsHeaderRight: css`
         flex: 0.2;
@@ -104,9 +106,18 @@ export const commonStyled = {
         margin-bottom: 20px;
     `,
     contentsBodyWrap: css`
-        padding: 20px;
+        padding: 0px 20px;
+        top: 60px;
         height: calc(100% - 60px);
         overflow-y: auto;
         color: #fefefe;
+        position: absolute;
+        width: 100%;
+        box-sizing: border-box;
+    `,
+    contentTitle: css`
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 30px;
     `
 }
